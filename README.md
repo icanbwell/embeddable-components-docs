@@ -44,7 +44,7 @@ Finally, we need to include the components in the html markup where you would li
 And with that, you have a working application that includes the b.well web-components in it. In this case you have included two web-components, the first is the IAL-1.5 ID Verification web component and the other is the Health Records Connection web component. It doesn't make sense to place these two in this placement in your app, but as this is a contrived app for demonstration purposes it shows that both can be placed here.
 
 When the page first loads, the app only displays a single button:
-![](images/initial-basic-app.png?raw=true)
+![Image of app without components](images/initial-basic-app.png?raw=true)
 
 But by clicking the button the onClick method is called and the two web-components display:
 ![](images/web-component-view.png?raw=true)
