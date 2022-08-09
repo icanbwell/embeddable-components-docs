@@ -52,3 +52,15 @@ Because the key was valid, the web components are displayed and the user is able
 ## Example React App
 
 The [react-app](./react-app/README.md) folder contains an example React application using the b.well data connection web-component.
+
+## Final Thoughts
+
+
+```mermaid
+  flowchart TD
+  A[Deploy to Production] --> B(Is it Friday?);
+  B -- Yes --> C[Do Not Deploy!];
+  B -- No --> D[Run deploy.sh to deploy!];
+  C ----> E[Enjoy your weekend!];
+  D ----> E[Enjoy your weekend!]'
+```
