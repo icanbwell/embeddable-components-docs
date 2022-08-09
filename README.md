@@ -62,5 +62,5 @@ The [react-app](./react-app/README.md) folder contains an example React applicat
   B -- Yes --> C[Do Not Deploy!];
   B -- No --> D[Run deploy.sh to deploy!];
   C ----> E[Enjoy your weekend!];
-  D ----> E[Enjoy your weekend!]'
+  D ----> E[Enjoy your weekend!];
 ```
