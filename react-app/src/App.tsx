@@ -8,7 +8,9 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <p>My Cool App</p>
       <bwell-data-connection></bwell-data-connection>
+      <p>Has b.well functionality in it...</p>
     </div>
   );
 }

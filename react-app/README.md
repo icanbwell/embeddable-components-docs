@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Example React App using b.well embeddable components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React app (created with create react app) that shows how to embed b.well embeddable components in it. This is only here to be an example of how to integrate b.well web-components into your React app. Let's get started!
 
-## Available Scripts
+## Prepare
 
-In the project directory, you can run:
+If you haven't already, clone this repo or download the code for this app to a folder on your development machine.
 
-### `npm start`
+From there you will need to run one of the following commands:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ npm init
+$ yarn
+$
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This should have created a node_modules folder inside your application with the appropriate dependancies based on the package.json file in this folder.
 
-### `npm test`
+Congratulations, you are ready to run the app!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running the app
 
-### `npm run build`
+Now execute one of these two commands at the command line.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ npm start
+$ yarn start
+$
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What is happening
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Let's walk through how this is all happening and how we got it to happen.
 
-### `npm run eject`
+The first thing we had to do was include the npm module in our application with one of the two commands below:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ npm
+$ yarn add @icanbwell/data-connection
+$
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This added the bwell-data-connection npm module and web component to your app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The second thing we had to do was import this into one of our jsx/tsx files. In this case we added it to src/App.tsx. You can include it in any React component that needs it with an import statement like this:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```typescript
+import "@icanbwell/data-connection";
+```
 
-## Learn More
+This will allow you to initialize the b.well components system and use the b.well web components in your react component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We placed the initialization code inside a useEffect hook as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```typescript
+useEffect(() => {
+  window.bwell.init("Your key goes here");
+}, []);
+```
+
+This block of code simply initializes the b.well component system for you. Please remember to use your own key where it says 'Your key goes here'.
+
+Finally, place the actual web component wherever in your jsx that you would like it to appear as if it was another React component.
+
+In our example it looks like this:
+
+```typescript
+<bwell-data-connection></bwell-data-connection>
+```
+
+Notice that the name of the component is 'bwell-' and the name of the components npm module.
+
+## Conclusion
+
+Thank you for running the app and learning how easy it is to integrate our web components into your React app.
