@@ -2,7 +2,7 @@
 
 Welcome to b.well's embeddable web components documentation. We will be showing you how to get started and use our components to integrate our functionality into your applications.
 
-There are several ways you can include our components, we will go from the most simple straighforward way (plain html files with javascript script tags) to examples that use various frameworks like React, Vue, etc.
+There are several ways you can include our components.  This example demonstrates the most simple straighforward way using plain html files with javascript script tags.
 
 There are three basic steps that you will need to do to include our components:
 
