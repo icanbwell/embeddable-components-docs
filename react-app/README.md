@@ -45,7 +45,7 @@ This added the bwell-data-connection npm module and web component to your app.
 The second thing we had to do was import this into one of our jsx/tsx files. In this case we added it to src/App.tsx. You can include it in any React component that needs it with an import statement like this:
 
 ```typescript
-import "@icanbwell/data-connection";
+import "@icanbwell/welcome";
 ```
 
 This will allow you to initialize the b.well components system and use the b.well web components in your react component.
@@ -65,7 +65,7 @@ Finally, place the actual web component wherever in your jsx that you would like
 In our example it looks like this:
 
 ```typescript
-<bwell-data-connection></bwell-data-connection>
+<bwell-welcome></bwell-welcome>
 ```
 
 Notice that the name of the component is 'bwell-' and the name of the components npm module.

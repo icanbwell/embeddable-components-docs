@@ -16,8 +16,7 @@ There are three basic steps that you will need to do to include our components:
 It really is that easy. As you can see from the example.html file in this repo, in the `<head>` tag of the file we include two scripts:
 
 ```html
-<script src="https://bwell-dev-platform-static-ue1.s3.amazonaws.com/embeddable/bwell-connections.federated-loader.js"></script>
-<script src="https://bwell-dev-platform-static-ue1.s3.amazonaws.com/embeddable/user-identity.federated-loader.js"></script>
+<script src="https://embeddables.prod.icanbwell.com/embeddables/welcome/0.0.7/loader/index.js"></script>
 ```
 
 These two script tags import two js libraries, one each for two of our web components that are used later in the code.
@@ -26,8 +25,9 @@ Next we created a callback so that we could initialize the system with your appl
 
 ```html
 <script type="text/javascript">
-  function onClick() {
-    bwell.init("Replace with your Key");
+  async function onClick() {
+    await bwell.init("Replace with your Key");
+    const userInfo = await bwell.setUser(authenticationJWT);
   }
 </script>
 ```
@@ -37,7 +37,7 @@ When called this function will simply send your key into the init function and i
 Finally, we need to include the components in the html markup where you would like to place them:
 
 ```html
-<embeddable-bwell-connections></embeddable-bwell-connections> <bwell-user-identity></bwell-user-identity>
+<bwell-welcome></bwell-welcome>
 ```
 
 And with that, you have a working application that includes the b.well web-components in it. In this case you have included two web-components, the first is the IAL-1.5 ID Verification web component and the other is the Health Records Connection web component. It doesn't make sense to place these two in this placement in your app, but as this is a contrived app for demonstration purposes it shows that both can be placed here.
@@ -52,5 +52,3 @@ Because the key was valid, the web components are displayed and the user is able
 ## Example React App
 
 The [react-app](./react-app/README.md) folder contains an example React application using the b.well data connection web-component.
-
-

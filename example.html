@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <head>
-  <script src="https://bwell-dev-platform-static-ue1.s3.amazonaws.com/embeddable/bwell-connections.federated-loader.js"></script>
-  <script src="https://bwell-dev-platform-static-ue1.s3.amazonaws.com/embeddable/user-identity.federated-loader.js"></script>
+  <script src="https://embeddables.prod.icanbwell.com/embeddables/welcome/0.0.7/loader/index.js"></script>
   <script type="text/javascript">
-    function onClick() {
-      bwell.init("Replace with your Key");
+    async function onClick() {
+      await bwell.init("Replace with your Key");
+      const userInfo = await bwell.setUser(authenticationJWT);
     }
   </script>
   <title>Client's App</title>
 </head>
 <body>
   <div style="text-align: center">
-    <button style="background-color: #323264; color: white" onClick="{onClick()}">b.well Data Connections</button>
-    <embeddable-bwell-connections></embeddable-bwell-connections>
-    <bwell-user-identity></bwell-user-identity>
+    <button style="background-color: #323264; color: white" onClick="{onClick()}">b.well Welcome Screen</button>
+    <bwell-welcome></bwell-welcome>
   </div>
 </body>
