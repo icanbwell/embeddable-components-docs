@@ -50,7 +50,7 @@ Because the key was valid, the web components are displayed and the user is able
 
 ## Putting it all together
 
-[Let's see it in action!](https://embeddables.prod.icanbwell.com/sandbox-pages/sandbox.html)
+[Let's see it in action!](https://embeddables.prod.icanbwell.com/sandbox-pages/index.html)
 
 ## Example React App
 
