@@ -27,7 +27,7 @@ Next we created a callback so that we could initialize the system with your appl
 <script type="text/javascript">
   async function onClick() {
     await bwell.init("Replace with your Key");
-    const userInfo = await bwell.setUser(authenticationJWT);
+    const userInfo = await bwell.setUserToken(authenticationJWT);
   }
 </script>
 ```
